@@ -8,5 +8,6 @@ int getMax(int* ar, int size);
 void randomFilling(int* ar,int size,int min,int max);
 void bubbleSort(int* ar,int size);
 int showEl(int* ar, int size);
+int counter();
 
 #endif
