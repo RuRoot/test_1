@@ -5,11 +5,10 @@ using namespace std;
 
 
 int getMax(int* ar, int size){
-    static int recursionsize=0;
+    counter();
     static int ind=0;
     static int max=ar[ind];
     if (ind == size-1){
-        cout<<"recursion depth "<<recursionsize<<endl;
         return(max);
     }
     if (max <= ar[ind]){
@@ -20,13 +19,10 @@ int getMax(int* ar, int size){
 }
 
 int getMin(int* ar, int size){
-
+    counter();
     static int index=0;
-
-    static int recursionsize=0;
     static int min=ar[index];
     if (index == size-1){
-        cout<<"recursion depth "<<recursionsize<<endl;
         return(min);
     }
     if (min >= ar[index]){
@@ -67,3 +63,8 @@ void bubbleSort(int* ar,int size){
     }
 }
 
+int counter(){
+    static int counter=0;
+    counter=counter+1;
+    return counter;
+}
